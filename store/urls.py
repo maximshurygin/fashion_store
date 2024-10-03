@@ -28,6 +28,5 @@ urlpatterns = [
     path('order/create/', CreateOrderView.as_view(), name='create_order'),
     path('order/<int:order_id>/', OrderDetailView.as_view(), name='order_detail'),
     path('order/success/', OrderSuccessView.as_view(), name='order_success'),
-    path('order/<int:order_id>/cancel/', CancelOrderView.as_view(), name='cancel_order'),  # Новый маршрут
-
+    path('order/<int:order_id>/cancel/', CancelOrderView.as_view(), name='cancel_order'),
 ]
