@@ -1,0 +1,2265 @@
+[
+{
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+        "action_time": "2024-09-12T07:48:54.330Z",
+        "user": 6,
+        "content_type": 7,
+        "object_id": "6",
+        "object_repr": "Верхняя одежда",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+        "action_time": "2024-09-12T07:49:13.448Z",
+        "user": 6,
+        "content_type": 10,
+        "object_id": "8",
+        "object_repr": "Куртка - Puma - Мужской - Черный",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"\\u0444\\u043e\\u0442\\u043e\\u0433\\u0440\\u0430\\u0444\\u0438\\u044f\", \"object\": \"\\u041a\\u0443\\u0440\\u0442\\u043a\\u0430 - product_images/kurtka1.webp\"}}, {\"added\": {\"name\": \"\\u0444\\u043e\\u0442\\u043e\\u0433\\u0440\\u0430\\u0444\\u0438\\u044f\", \"object\": \"\\u041a\\u0443\\u0440\\u0442\\u043a\\u0430 - product_images/kurtka2.webp\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+        "action_time": "2024-09-16T08:39:04.604Z",
+        "user": 6,
+        "content_type": 12,
+        "object_id": "4",
+        "object_repr": "Футболка - M - Черный - 7 шт.",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+        "action_time": "2024-09-16T08:39:15.083Z",
+        "user": 6,
+        "content_type": 12,
+        "object_id": "5",
+        "object_repr": "Сумка - Один размер - Красный - 12 шт.",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+        "action_time": "2024-09-16T08:39:24.276Z",
+        "user": 6,
+        "content_type": 12,
+        "object_id": "6",
+        "object_repr": "Кошелек - Один размер - Черный - 15 шт.",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+        "action_time": "2024-09-16T08:39:33.528Z",
+        "user": 6,
+        "content_type": 12,
+        "object_id": "7",
+        "object_repr": "Куртка - M - Черный - 6 шт.",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+        "action_time": "2024-09-16T08:39:43.623Z",
+        "user": 6,
+        "content_type": 12,
+        "object_id": "8",
+        "object_repr": "Куртка - L - Черный - 7 шт.",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+        "action_time": "2024-09-29T08:20:43.629Z",
+        "user": 6,
+        "content_type": 10,
+        "object_id": "9",
+        "object_repr": "Сумка черная - Lichi - Женский - Черный",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"\\u0444\\u043e\\u0442\\u043e\\u0433\\u0440\\u0430\\u0444\\u0438\\u044f\", \"object\": \"\\u0421\\u0443\\u043c\\u043a\\u0430 \\u0447\\u0435\\u0440\\u043d\\u0430\\u044f - product_images/new_bag.webp\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+        "action_time": "2024-09-29T08:21:26.210Z",
+        "user": 6,
+        "content_type": 12,
+        "object_id": "9",
+        "object_repr": "Сумка черная - Один размер - Черный - 10 шт.",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+        "action_time": "2024-10-03T11:01:19.906Z",
+        "user": 6,
+        "content_type": 20,
+        "object_id": "6",
+        "object_repr": "Заказ #6 от maximys2142@mail.ru",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u0442\\u0430\\u0442\\u0443\\u0441\"]}}]"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+        "name": "Can add log entry",
+        "content_type": 1,
+        "codename": "add_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+        "name": "Can change log entry",
+        "content_type": 1,
+        "codename": "change_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+        "name": "Can delete log entry",
+        "content_type": 1,
+        "codename": "delete_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+        "name": "Can view log entry",
+        "content_type": 1,
+        "codename": "view_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+        "name": "Can add permission",
+        "content_type": 2,
+        "codename": "add_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+        "name": "Can change permission",
+        "content_type": 2,
+        "codename": "change_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+        "name": "Can delete permission",
+        "content_type": 2,
+        "codename": "delete_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+        "name": "Can view permission",
+        "content_type": 2,
+        "codename": "view_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+        "name": "Can add group",
+        "content_type": 3,
+        "codename": "add_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+        "name": "Can change group",
+        "content_type": 3,
+        "codename": "change_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+        "name": "Can delete group",
+        "content_type": 3,
+        "codename": "delete_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+        "name": "Can view group",
+        "content_type": 3,
+        "codename": "view_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+        "name": "Can add content type",
+        "content_type": 4,
+        "codename": "add_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+        "name": "Can change content type",
+        "content_type": 4,
+        "codename": "change_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+        "name": "Can delete content type",
+        "content_type": 4,
+        "codename": "delete_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+        "name": "Can view content type",
+        "content_type": 4,
+        "codename": "view_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+        "name": "Can add session",
+        "content_type": 5,
+        "codename": "add_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+        "name": "Can change session",
+        "content_type": 5,
+        "codename": "change_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+        "name": "Can delete session",
+        "content_type": 5,
+        "codename": "delete_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+        "name": "Can view session",
+        "content_type": 5,
+        "codename": "view_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+        "name": "Can add бренд",
+        "content_type": 6,
+        "codename": "add_brand"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+        "name": "Can change бренд",
+        "content_type": 6,
+        "codename": "change_brand"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+        "name": "Can delete бренд",
+        "content_type": 6,
+        "codename": "delete_brand"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+        "name": "Can view бренд",
+        "content_type": 6,
+        "codename": "view_brand"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+        "name": "Can add категория",
+        "content_type": 7,
+        "codename": "add_category"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+        "name": "Can change категория",
+        "content_type": 7,
+        "codename": "change_category"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+        "name": "Can delete категория",
+        "content_type": 7,
+        "codename": "delete_category"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+        "name": "Can view категория",
+        "content_type": 7,
+        "codename": "view_category"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+        "name": "Can add цвет",
+        "content_type": 8,
+        "codename": "add_color"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+        "name": "Can change цвет",
+        "content_type": 8,
+        "codename": "change_color"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+        "name": "Can delete цвет",
+        "content_type": 8,
+        "codename": "delete_color"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+        "name": "Can view цвет",
+        "content_type": 8,
+        "codename": "view_color"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+        "name": "Can add размер",
+        "content_type": 9,
+        "codename": "add_size"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+        "name": "Can change размер",
+        "content_type": 9,
+        "codename": "change_size"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+        "name": "Can delete размер",
+        "content_type": 9,
+        "codename": "delete_size"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+        "name": "Can view размер",
+        "content_type": 9,
+        "codename": "view_size"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 37,
+    "fields": {
+        "name": "Can add товар",
+        "content_type": 10,
+        "codename": "add_product"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 38,
+    "fields": {
+        "name": "Can change товар",
+        "content_type": 10,
+        "codename": "change_product"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 39,
+    "fields": {
+        "name": "Can delete товар",
+        "content_type": 10,
+        "codename": "delete_product"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 40,
+    "fields": {
+        "name": "Can view товар",
+        "content_type": 10,
+        "codename": "view_product"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 41,
+    "fields": {
+        "name": "Can add фотография",
+        "content_type": 11,
+        "codename": "add_productimage"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 42,
+    "fields": {
+        "name": "Can change фотография",
+        "content_type": 11,
+        "codename": "change_productimage"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 43,
+    "fields": {
+        "name": "Can delete фотография",
+        "content_type": 11,
+        "codename": "delete_productimage"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 44,
+    "fields": {
+        "name": "Can view фотография",
+        "content_type": 11,
+        "codename": "view_productimage"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 45,
+    "fields": {
+        "name": "Can add учет товара",
+        "content_type": 12,
+        "codename": "add_productinventory"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 46,
+    "fields": {
+        "name": "Can change учет товара",
+        "content_type": 12,
+        "codename": "change_productinventory"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 47,
+    "fields": {
+        "name": "Can delete учет товара",
+        "content_type": 12,
+        "codename": "delete_productinventory"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 48,
+    "fields": {
+        "name": "Can view учет товара",
+        "content_type": 12,
+        "codename": "view_productinventory"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 49,
+    "fields": {
+        "name": "Can add user",
+        "content_type": 13,
+        "codename": "add_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 50,
+    "fields": {
+        "name": "Can change user",
+        "content_type": 13,
+        "codename": "change_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 51,
+    "fields": {
+        "name": "Can delete user",
+        "content_type": 13,
+        "codename": "delete_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 52,
+    "fields": {
+        "name": "Can view user",
+        "content_type": 13,
+        "codename": "view_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 53,
+    "fields": {
+        "name": "Can add site",
+        "content_type": 14,
+        "codename": "add_site"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 54,
+    "fields": {
+        "name": "Can change site",
+        "content_type": 14,
+        "codename": "change_site"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 55,
+    "fields": {
+        "name": "Can delete site",
+        "content_type": 14,
+        "codename": "delete_site"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 56,
+    "fields": {
+        "name": "Can view site",
+        "content_type": 14,
+        "codename": "view_site"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 57,
+    "fields": {
+        "name": "Can add email address",
+        "content_type": 15,
+        "codename": "add_emailaddress"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 58,
+    "fields": {
+        "name": "Can change email address",
+        "content_type": 15,
+        "codename": "change_emailaddress"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 59,
+    "fields": {
+        "name": "Can delete email address",
+        "content_type": 15,
+        "codename": "delete_emailaddress"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 60,
+    "fields": {
+        "name": "Can view email address",
+        "content_type": 15,
+        "codename": "view_emailaddress"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 61,
+    "fields": {
+        "name": "Can add email confirmation",
+        "content_type": 16,
+        "codename": "add_emailconfirmation"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 62,
+    "fields": {
+        "name": "Can change email confirmation",
+        "content_type": 16,
+        "codename": "change_emailconfirmation"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 63,
+    "fields": {
+        "name": "Can delete email confirmation",
+        "content_type": 16,
+        "codename": "delete_emailconfirmation"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 64,
+    "fields": {
+        "name": "Can view email confirmation",
+        "content_type": 16,
+        "codename": "view_emailconfirmation"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 65,
+    "fields": {
+        "name": "Can add cart",
+        "content_type": 17,
+        "codename": "add_cart"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 66,
+    "fields": {
+        "name": "Can change cart",
+        "content_type": 17,
+        "codename": "change_cart"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 67,
+    "fields": {
+        "name": "Can delete cart",
+        "content_type": 17,
+        "codename": "delete_cart"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 68,
+    "fields": {
+        "name": "Can view cart",
+        "content_type": 17,
+        "codename": "view_cart"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 69,
+    "fields": {
+        "name": "Can add cart item",
+        "content_type": 18,
+        "codename": "add_cartitem"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 70,
+    "fields": {
+        "name": "Can change cart item",
+        "content_type": 18,
+        "codename": "change_cartitem"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 71,
+    "fields": {
+        "name": "Can delete cart item",
+        "content_type": 18,
+        "codename": "delete_cartitem"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 72,
+    "fields": {
+        "name": "Can view cart item",
+        "content_type": 18,
+        "codename": "view_cartitem"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 73,
+    "fields": {
+        "name": "Can add избранный товар",
+        "content_type": 19,
+        "codename": "add_favouriteitem"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 74,
+    "fields": {
+        "name": "Can change избранный товар",
+        "content_type": 19,
+        "codename": "change_favouriteitem"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 75,
+    "fields": {
+        "name": "Can delete избранный товар",
+        "content_type": 19,
+        "codename": "delete_favouriteitem"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 76,
+    "fields": {
+        "name": "Can view избранный товар",
+        "content_type": 19,
+        "codename": "view_favouriteitem"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 77,
+    "fields": {
+        "name": "Can add заказ",
+        "content_type": 20,
+        "codename": "add_order"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 78,
+    "fields": {
+        "name": "Can change заказ",
+        "content_type": 20,
+        "codename": "change_order"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 79,
+    "fields": {
+        "name": "Can delete заказ",
+        "content_type": 20,
+        "codename": "delete_order"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 80,
+    "fields": {
+        "name": "Can view заказ",
+        "content_type": 20,
+        "codename": "view_order"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 81,
+    "fields": {
+        "name": "Can add заказанный товар",
+        "content_type": 21,
+        "codename": "add_orderitem"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 82,
+    "fields": {
+        "name": "Can change заказанный товар",
+        "content_type": 21,
+        "codename": "change_orderitem"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 83,
+    "fields": {
+        "name": "Can delete заказанный товар",
+        "content_type": 21,
+        "codename": "delete_orderitem"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 84,
+    "fields": {
+        "name": "Can view заказанный товар",
+        "content_type": 21,
+        "codename": "view_orderitem"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 1,
+    "fields": {
+        "app_label": "admin",
+        "model": "logentry"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 2,
+    "fields": {
+        "app_label": "auth",
+        "model": "permission"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 3,
+    "fields": {
+        "app_label": "auth",
+        "model": "group"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 4,
+    "fields": {
+        "app_label": "contenttypes",
+        "model": "contenttype"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 5,
+    "fields": {
+        "app_label": "sessions",
+        "model": "session"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": {
+        "app_label": "store",
+        "model": "brand"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 7,
+    "fields": {
+        "app_label": "store",
+        "model": "category"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 8,
+    "fields": {
+        "app_label": "store",
+        "model": "color"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 9,
+    "fields": {
+        "app_label": "store",
+        "model": "size"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 10,
+    "fields": {
+        "app_label": "store",
+        "model": "product"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 11,
+    "fields": {
+        "app_label": "store",
+        "model": "productimage"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 12,
+    "fields": {
+        "app_label": "store",
+        "model": "productinventory"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 13,
+    "fields": {
+        "app_label": "users",
+        "model": "user"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 14,
+    "fields": {
+        "app_label": "sites",
+        "model": "site"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 15,
+    "fields": {
+        "app_label": "account",
+        "model": "emailaddress"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 16,
+    "fields": {
+        "app_label": "account",
+        "model": "emailconfirmation"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 17,
+    "fields": {
+        "app_label": "store",
+        "model": "cart"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 18,
+    "fields": {
+        "app_label": "store",
+        "model": "cartitem"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 19,
+    "fields": {
+        "app_label": "store",
+        "model": "favouriteitem"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 20,
+    "fields": {
+        "app_label": "store",
+        "model": "order"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 21,
+    "fields": {
+        "app_label": "store",
+        "model": "orderitem"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "1svf4kwq7sx6td3hpzpdy53oasx70mcv",
+    "fields": {
+        "session_data": ".eJxVjDEOwyAQBP9CHSHAcDYp0-cN6O6A4CTCErarKH-PHblxsc3s7H4EY1vCGMUVLiLgupSwzqn9iTBanCAhv1Ldm_jE-pgkT3VpI8ldkUc7y_sU0_t2uKeDgnPZ1swDdkBJbSFAm433zjsc-o4tkiFwSBawY6Wt1ZDB-N5nF71Bp5QR3x-zFzuE:1st1WX:16dFuISb-8xQmdeBamoso6f3KbAM1Q4zev7M37pjL14",
+        "expire_date": "2024-10-08T09:07:57.692Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "4hje7oa1t4zf7azl2kpm6rudvtrzyils",
+    "fields": {
+        "session_data": "eyJjYXJ0X2lkIjo3fQ:1sq9oS:FTiI0Dab8k8ixFhhFnGq_5AC3wHe-reUMo26HswDXsM",
+        "expire_date": "2024-09-30T11:22:36.656Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "83pll1u31dnitqvnwz32579dj69ias83",
+    "fields": {
+        "session_data": "eyJjYXJ0X2lkIjo4fQ:1sq9x4:xel4SG8_mnh6qeYxvuO9-PiihgXjkMLyr1xAxCfyvYM",
+        "expire_date": "2024-09-30T11:31:30.561Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "8g55s9pocaes8rzr97qfj594rvh9otbs",
+    "fields": {
+        "session_data": ".eJxVjDsOgzAQRO_iOrLM-gObMn3OYO2uTSCJsGSginL3QERDMc2bN_NRQnWJY1JXwIuKtC5DXOdc_0hBo06QSV552pv0pOlRtJRpqSPrXdFHO-t7Sfl9O9zTwUDzsK1FOrKBs9nCgVwPiB49da0VRwwcPLELZMU0zjWhD4At9j4hkDcG1PcH2uo7uQ:1swJaZ:bxHqJNkn8tIVXGvPIyHxYIpvf6wz_ISi522CTCrWzcA",
+        "expire_date": "2024-10-17T11:01:43.785Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "f43bk2a43w0b2mk6wfqsilno3mpxn4ds",
+    "fields": {
+        "session_data": "eyJjYXJ0X2lkIjoxMX0:1sqSaN:yUkk32MDjN7-bykPhx-E_f0BNAKxvhB-lNE7GbmdVqw",
+        "expire_date": "2024-10-01T07:25:19.184Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "nqe5btstlon0v2m69f1l0o37l9fpnfws",
+    "fields": {
+        "session_data": ".eJxVjMEOwiAQRP-FsyGFLaR49O43kN1lI1UDSWlPxn9Xkh7a48x7Mx8VcVtz3JoscU7qqqxRl2NJyC8pnaQnlkfVXMu6zKS7onfa9L0med9293SQseW-JnFjIGEPYQJAIAk2CTtEh2ZEAGOMTAMGi97_k7XAg09MQBA8q-8PF-84FA:1spMNn:3bfELTJ2fs89T3tt4_aeos5T3PQB7Pez9l8bw3XxH1s",
+        "expire_date": "2024-09-28T06:35:47.624Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "ol3hfpdi6gm8ea273d40i5lppbuet7i9",
+    "fields": {
+        "session_data": ".eJxVjEEOwiAQRe_C2hBhCi0u3XsGMsyAVA1NgK6Md9eabrp97_3_FoS1-5nFBU7C49qzX1usfyKsOLCA9IxlE_zAcl8kLaXXOcgtkbtt8rZwfF339nCQseXfekQCSqSjC4athSkly4lAORX0GchwUoNLEBxEZkNaj26wEyMZrR2T-HwBoF48WA:1sq9d7:1q56LFx_4Vym0R6jD5RzOiRLeSzx-FUT7MwRIv-_mus",
+        "expire_date": "2024-09-30T11:10:53.252Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "rbmve5xpwi7axbv73dnb5t9re5gd4fls",
+    "fields": {
+        "session_data": ".eJxVjEEOwiAQRe_C2hAZCu24dN8zEJhhpGpoUtqV8e7apAvd_vfef6kQt7WEreUlTKwuyqvT75YiPXLdAd9jvc2a5rouU9K7og_a9Dhzfl4P9--gxFa-dR_JkhBkTI69t4OIZyFr0CQ4W3IspkOxCW1mdgTQY-cHjuQAkEm9PwuCOKU:1sup96:gErQNnO4lKOas1BrvEQCVH-MrTHkVS-7Ckw1hD49PQE",
+        "expire_date": "2024-10-13T08:19:12.849Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "rjhxqf2k2hey9dwwqo5eqo08e3o8s7vr",
+    "fields": {
+        "session_data": "eyJjYXJ0X2lkIjo1fQ:1sq9XQ:1GYDYlR0s5RDUNs4gsHnRmo85JDvGW30ziubyW6UIbI",
+        "expire_date": "2024-09-30T11:05:00.633Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "usclcn1i37wuhpkwegsxro0avn1y3cn7",
+    "fields": {
+        "session_data": "eyJjYXJ0X2lkIjo0fQ:1sq9Uu:ZUbpTkTeevI3EwRZm-ywQ1uaAw2KSRC1FqH6sWLOFIo",
+        "expire_date": "2024-09-30T11:02:24.303Z"
+    }
+},
+{
+    "model": "store.brand",
+    "pk": 1,
+    "fields": {
+        "name": "Nike"
+    }
+},
+{
+    "model": "store.brand",
+    "pk": 2,
+    "fields": {
+        "name": "Adidas"
+    }
+},
+{
+    "model": "store.brand",
+    "pk": 3,
+    "fields": {
+        "name": "Puma"
+    }
+},
+{
+    "model": "store.brand",
+    "pk": 4,
+    "fields": {
+        "name": "Zara"
+    }
+},
+{
+    "model": "store.brand",
+    "pk": 5,
+    "fields": {
+        "name": "Lichi"
+    }
+},
+{
+    "model": "store.category",
+    "pk": 1,
+    "fields": {
+        "name": "Джинсы",
+        "slug": "jeans"
+    }
+},
+{
+    "model": "store.category",
+    "pk": 2,
+    "fields": {
+        "name": "Платья",
+        "slug": "dress"
+    }
+},
+{
+    "model": "store.category",
+    "pk": 3,
+    "fields": {
+        "name": "Футболки",
+        "slug": "tshirt"
+    }
+},
+{
+    "model": "store.category",
+    "pk": 4,
+    "fields": {
+        "name": "Сумки",
+        "slug": "bag"
+    }
+},
+{
+    "model": "store.category",
+    "pk": 5,
+    "fields": {
+        "name": "Кошельки",
+        "slug": "wallet"
+    }
+},
+{
+    "model": "store.category",
+    "pk": 6,
+    "fields": {
+        "name": "Верхняя одежда",
+        "slug": "coats"
+    }
+},
+{
+    "model": "store.size",
+    "pk": 1,
+    "fields": {
+        "name": "S"
+    }
+},
+{
+    "model": "store.size",
+    "pk": 2,
+    "fields": {
+        "name": "M"
+    }
+},
+{
+    "model": "store.size",
+    "pk": 3,
+    "fields": {
+        "name": "L"
+    }
+},
+{
+    "model": "store.size",
+    "pk": 4,
+    "fields": {
+        "name": "XL"
+    }
+},
+{
+    "model": "store.size",
+    "pk": 5,
+    "fields": {
+        "name": "XXL"
+    }
+},
+{
+    "model": "store.size",
+    "pk": 6,
+    "fields": {
+        "name": "Один размер"
+    }
+},
+{
+    "model": "store.color",
+    "pk": 1,
+    "fields": {
+        "name": "Черный"
+    }
+},
+{
+    "model": "store.color",
+    "pk": 2,
+    "fields": {
+        "name": "Белый"
+    }
+},
+{
+    "model": "store.color",
+    "pk": 3,
+    "fields": {
+        "name": "Красный"
+    }
+},
+{
+    "model": "store.color",
+    "pk": 4,
+    "fields": {
+        "name": "Серый"
+    }
+},
+{
+    "model": "store.color",
+    "pk": 5,
+    "fields": {
+        "name": "Бежевый"
+    }
+},
+{
+    "model": "store.color",
+    "pk": 6,
+    "fields": {
+        "name": "Синий"
+    }
+},
+{
+    "model": "store.productimage",
+    "pk": 3,
+    "fields": {
+        "product": 2,
+        "image": "product_images/jeans1.webp",
+        "alt_text": ""
+    }
+},
+{
+    "model": "store.productimage",
+    "pk": 4,
+    "fields": {
+        "product": 2,
+        "image": "product_images/jeans2.webp",
+        "alt_text": ""
+    }
+},
+{
+    "model": "store.productimage",
+    "pk": 8,
+    "fields": {
+        "product": 5,
+        "image": "product_images/футба1_F2mROvv.jpeg",
+        "alt_text": ""
+    }
+},
+{
+    "model": "store.productimage",
+    "pk": 9,
+    "fields": {
+        "product": 5,
+        "image": "product_images/футба2_K8PGt3W.webp",
+        "alt_text": ""
+    }
+},
+{
+    "model": "store.productimage",
+    "pk": 10,
+    "fields": {
+        "product": 6,
+        "image": "product_images/bag1_eaYH6tv.jpeg",
+        "alt_text": ""
+    }
+},
+{
+    "model": "store.productimage",
+    "pk": 11,
+    "fields": {
+        "product": 6,
+        "image": "product_images/bag2_77K0ukP.jpeg",
+        "alt_text": ""
+    }
+},
+{
+    "model": "store.productimage",
+    "pk": 12,
+    "fields": {
+        "product": 7,
+        "image": "product_images/кош1_btJn940.webp",
+        "alt_text": ""
+    }
+},
+{
+    "model": "store.productimage",
+    "pk": 13,
+    "fields": {
+        "product": 8,
+        "image": "product_images/kurtka1.webp",
+        "alt_text": ""
+    }
+},
+{
+    "model": "store.productimage",
+    "pk": 14,
+    "fields": {
+        "product": 8,
+        "image": "product_images/kurtka2.webp",
+        "alt_text": ""
+    }
+},
+{
+    "model": "store.productimage",
+    "pk": 15,
+    "fields": {
+        "product": 9,
+        "image": "product_images/new_bag.webp",
+        "alt_text": ""
+    }
+},
+{
+    "model": "store.product",
+    "pk": 2,
+    "fields": {
+        "name": "Джинсы",
+        "price": "10000.00",
+        "description": "Джинсы хлопковые женские",
+        "brand": 4,
+        "category": 1,
+        "gender": "F",
+        "sku": "639451238",
+        "slug": "jinsi",
+        "sizes": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "colors": [
+            6
+        ]
+    }
+},
+{
+    "model": "store.product",
+    "pk": 5,
+    "fields": {
+        "name": "Футболка",
+        "price": "5000.00",
+        "description": "Хлопковая футболка",
+        "brand": 2,
+        "category": 3,
+        "gender": "M",
+        "sku": "72741110",
+        "slug": "futbolka",
+        "sizes": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "colors": [
+            1
+        ]
+    }
+},
+{
+    "model": "store.product",
+    "pk": 6,
+    "fields": {
+        "name": "Сумка",
+        "price": "7000.00",
+        "description": "Сумка кожаная",
+        "brand": 4,
+        "category": 4,
+        "gender": "F",
+        "sku": "72793531",
+        "slug": "sumka",
+        "sizes": [
+            6
+        ],
+        "colors": [
+            3
+        ]
+    }
+},
+{
+    "model": "store.product",
+    "pk": 7,
+    "fields": {
+        "name": "Кошелек",
+        "price": "6000.00",
+        "description": "Кожаный кошелек",
+        "brand": 4,
+        "category": 5,
+        "gender": "U",
+        "sku": "72890687",
+        "slug": "koshelek",
+        "sizes": [
+            6
+        ],
+        "colors": [
+            1
+        ]
+    }
+},
+{
+    "model": "store.product",
+    "pk": 8,
+    "fields": {
+        "name": "Куртка",
+        "price": "10000.00",
+        "description": "Куртка мужская",
+        "brand": 3,
+        "category": 6,
+        "gender": "M",
+        "sku": "27353355",
+        "slug": "kurtka",
+        "sizes": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "colors": [
+            1
+        ]
+    }
+},
+{
+    "model": "store.product",
+    "pk": 9,
+    "fields": {
+        "name": "Сумка черная",
+        "price": "10000.00",
+        "description": "Сумка черная",
+        "brand": 5,
+        "category": 4,
+        "gender": "F",
+        "sku": "98043789",
+        "slug": "sumka-chernaia",
+        "sizes": [
+            6
+        ],
+        "colors": [
+            1
+        ]
+    }
+},
+{
+    "model": "store.productinventory",
+    "pk": 1,
+    "fields": {
+        "product": 2,
+        "size": 1,
+        "color": 6,
+        "stock": 6,
+        "created_at": "2024-09-10T08:06:25.577Z",
+        "updated_at": "2024-10-03T10:41:19.360Z"
+    }
+},
+{
+    "model": "store.productinventory",
+    "pk": 2,
+    "fields": {
+        "product": 2,
+        "size": 2,
+        "color": 6,
+        "stock": 5,
+        "created_at": "2024-09-10T08:09:01.975Z",
+        "updated_at": "2024-10-03T10:37:05.433Z"
+    }
+},
+{
+    "model": "store.productinventory",
+    "pk": 3,
+    "fields": {
+        "product": 2,
+        "size": 3,
+        "color": 6,
+        "stock": 10,
+        "created_at": "2024-09-10T08:09:09.751Z",
+        "updated_at": "2024-09-10T08:09:09.751Z"
+    }
+},
+{
+    "model": "store.productinventory",
+    "pk": 4,
+    "fields": {
+        "product": 5,
+        "size": 2,
+        "color": 1,
+        "stock": 7,
+        "created_at": "2024-09-16T08:39:04.603Z",
+        "updated_at": "2024-10-03T10:36:32.305Z"
+    }
+},
+{
+    "model": "store.productinventory",
+    "pk": 5,
+    "fields": {
+        "product": 6,
+        "size": 6,
+        "color": 3,
+        "stock": 12,
+        "created_at": "2024-09-16T08:39:15.081Z",
+        "updated_at": "2024-09-16T08:39:15.081Z"
+    }
+},
+{
+    "model": "store.productinventory",
+    "pk": 6,
+    "fields": {
+        "product": 7,
+        "size": 6,
+        "color": 1,
+        "stock": 15,
+        "created_at": "2024-09-16T08:39:24.274Z",
+        "updated_at": "2024-10-03T09:57:30.019Z"
+    }
+},
+{
+    "model": "store.productinventory",
+    "pk": 7,
+    "fields": {
+        "product": 8,
+        "size": 2,
+        "color": 1,
+        "stock": 6,
+        "created_at": "2024-09-16T08:39:33.526Z",
+        "updated_at": "2024-09-16T08:39:33.527Z"
+    }
+},
+{
+    "model": "store.productinventory",
+    "pk": 8,
+    "fields": {
+        "product": 8,
+        "size": 3,
+        "color": 1,
+        "stock": 7,
+        "created_at": "2024-09-16T08:39:43.622Z",
+        "updated_at": "2024-09-16T08:39:43.622Z"
+    }
+},
+{
+    "model": "store.productinventory",
+    "pk": 9,
+    "fields": {
+        "product": 9,
+        "size": 6,
+        "color": 1,
+        "stock": 10,
+        "created_at": "2024-09-29T08:21:26.208Z",
+        "updated_at": "2024-09-29T08:21:26.208Z"
+    }
+},
+{
+    "model": "store.cart",
+    "pk": 1,
+    "fields": {
+        "user": 21,
+        "created_at": "2024-09-16T07:21:09.545Z"
+    }
+},
+{
+    "model": "store.cart",
+    "pk": 2,
+    "fields": {
+        "user": 6,
+        "created_at": "2024-09-16T07:37:40.049Z"
+    }
+},
+{
+    "model": "store.cart",
+    "pk": 3,
+    "fields": {
+        "user": null,
+        "created_at": "2024-09-16T08:50:12.307Z"
+    }
+},
+{
+    "model": "store.cart",
+    "pk": 4,
+    "fields": {
+        "user": null,
+        "created_at": "2024-09-16T11:02:24.288Z"
+    }
+},
+{
+    "model": "store.cart",
+    "pk": 5,
+    "fields": {
+        "user": null,
+        "created_at": "2024-09-16T11:05:00.620Z"
+    }
+},
+{
+    "model": "store.cart",
+    "pk": 6,
+    "fields": {
+        "user": null,
+        "created_at": "2024-09-16T11:06:48.255Z"
+    }
+},
+{
+    "model": "store.cart",
+    "pk": 7,
+    "fields": {
+        "user": null,
+        "created_at": "2024-09-16T11:22:36.633Z"
+    }
+},
+{
+    "model": "store.cart",
+    "pk": 8,
+    "fields": {
+        "user": null,
+        "created_at": "2024-09-16T11:31:30.540Z"
+    }
+},
+{
+    "model": "store.cart",
+    "pk": 9,
+    "fields": {
+        "user": null,
+        "created_at": "2024-09-16T11:41:58.611Z"
+    }
+},
+{
+    "model": "store.cart",
+    "pk": 10,
+    "fields": {
+        "user": null,
+        "created_at": "2024-09-17T07:23:49.548Z"
+    }
+},
+{
+    "model": "store.cart",
+    "pk": 11,
+    "fields": {
+        "user": null,
+        "created_at": "2024-09-17T07:25:06.894Z"
+    }
+},
+{
+    "model": "store.cart",
+    "pk": 12,
+    "fields": {
+        "user": null,
+        "created_at": "2024-09-17T07:25:43.632Z"
+    }
+},
+{
+    "model": "store.cart",
+    "pk": 13,
+    "fields": {
+        "user": null,
+        "created_at": "2024-09-17T07:33:30.760Z"
+    }
+},
+{
+    "model": "store.cart",
+    "pk": 14,
+    "fields": {
+        "user": null,
+        "created_at": "2024-09-17T07:35:38.167Z"
+    }
+},
+{
+    "model": "store.cart",
+    "pk": 15,
+    "fields": {
+        "user": null,
+        "created_at": "2024-09-17T07:37:03.460Z"
+    }
+},
+{
+    "model": "store.cart",
+    "pk": 16,
+    "fields": {
+        "user": null,
+        "created_at": "2024-09-17T07:40:44.721Z"
+    }
+},
+{
+    "model": "store.cart",
+    "pk": 17,
+    "fields": {
+        "user": null,
+        "created_at": "2024-09-17T07:47:59.560Z"
+    }
+},
+{
+    "model": "store.cart",
+    "pk": 18,
+    "fields": {
+        "user": null,
+        "created_at": "2024-09-17T07:53:40.135Z"
+    }
+},
+{
+    "model": "store.cart",
+    "pk": 19,
+    "fields": {
+        "user": null,
+        "created_at": "2024-09-17T07:56:46.570Z"
+    }
+},
+{
+    "model": "store.cart",
+    "pk": 20,
+    "fields": {
+        "user": null,
+        "created_at": "2024-09-17T07:59:12.329Z"
+    }
+},
+{
+    "model": "store.cart",
+    "pk": 21,
+    "fields": {
+        "user": null,
+        "created_at": "2024-09-17T08:00:47.576Z"
+    }
+},
+{
+    "model": "store.cart",
+    "pk": 22,
+    "fields": {
+        "user": null,
+        "created_at": "2024-09-17T08:02:59.841Z"
+    }
+},
+{
+    "model": "store.cart",
+    "pk": 23,
+    "fields": {
+        "user": null,
+        "created_at": "2024-09-17T08:19:10.796Z"
+    }
+},
+{
+    "model": "store.cart",
+    "pk": 24,
+    "fields": {
+        "user": null,
+        "created_at": "2024-09-17T08:19:29.441Z"
+    }
+},
+{
+    "model": "store.cart",
+    "pk": 25,
+    "fields": {
+        "user": null,
+        "created_at": "2024-09-17T12:36:56.124Z"
+    }
+},
+{
+    "model": "store.cart",
+    "pk": 26,
+    "fields": {
+        "user": null,
+        "created_at": "2024-09-17T12:37:23.396Z"
+    }
+},
+{
+    "model": "store.cart",
+    "pk": 27,
+    "fields": {
+        "user": null,
+        "created_at": "2024-09-29T08:21:50.226Z"
+    }
+},
+{
+    "model": "store.cart",
+    "pk": 28,
+    "fields": {
+        "user": null,
+        "created_at": "2024-10-02T17:29:24.640Z"
+    }
+},
+{
+    "model": "store.cart",
+    "pk": 29,
+    "fields": {
+        "user": null,
+        "created_at": "2024-10-03T11:01:40.777Z"
+    }
+},
+{
+    "model": "store.cartitem",
+    "pk": 5,
+    "fields": {
+        "cart": 3,
+        "product_inventory": 8,
+        "quantity": 1
+    }
+},
+{
+    "model": "store.cartitem",
+    "pk": 6,
+    "fields": {
+        "cart": 3,
+        "product_inventory": 4,
+        "quantity": 1
+    }
+},
+{
+    "model": "store.cartitem",
+    "pk": 7,
+    "fields": {
+        "cart": 3,
+        "product_inventory": 5,
+        "quantity": 8
+    }
+},
+{
+    "model": "store.cartitem",
+    "pk": 8,
+    "fields": {
+        "cart": 3,
+        "product_inventory": 6,
+        "quantity": 1
+    }
+},
+{
+    "model": "store.cartitem",
+    "pk": 9,
+    "fields": {
+        "cart": 3,
+        "product_inventory": 7,
+        "quantity": 1
+    }
+},
+{
+    "model": "store.cartitem",
+    "pk": 10,
+    "fields": {
+        "cart": 4,
+        "product_inventory": 7,
+        "quantity": 1
+    }
+},
+{
+    "model": "store.cartitem",
+    "pk": 11,
+    "fields": {
+        "cart": 5,
+        "product_inventory": 4,
+        "quantity": 1
+    }
+},
+{
+    "model": "store.cartitem",
+    "pk": 13,
+    "fields": {
+        "cart": 7,
+        "product_inventory": 5,
+        "quantity": 1
+    }
+},
+{
+    "model": "store.cartitem",
+    "pk": 15,
+    "fields": {
+        "cart": 9,
+        "product_inventory": 6,
+        "quantity": 1
+    }
+},
+{
+    "model": "store.cartitem",
+    "pk": 16,
+    "fields": {
+        "cart": 10,
+        "product_inventory": 7,
+        "quantity": 1
+    }
+},
+{
+    "model": "store.cartitem",
+    "pk": 17,
+    "fields": {
+        "cart": 10,
+        "product_inventory": 6,
+        "quantity": 1
+    }
+},
+{
+    "model": "store.cartitem",
+    "pk": 18,
+    "fields": {
+        "cart": 11,
+        "product_inventory": 4,
+        "quantity": 1
+    }
+},
+{
+    "model": "store.cartitem",
+    "pk": 19,
+    "fields": {
+        "cart": 12,
+        "product_inventory": 4,
+        "quantity": 1
+    }
+},
+{
+    "model": "store.cartitem",
+    "pk": 20,
+    "fields": {
+        "cart": 13,
+        "product_inventory": 7,
+        "quantity": 1
+    }
+},
+{
+    "model": "store.cartitem",
+    "pk": 21,
+    "fields": {
+        "cart": 13,
+        "product_inventory": 5,
+        "quantity": 1
+    }
+},
+{
+    "model": "store.cartitem",
+    "pk": 22,
+    "fields": {
+        "cart": 14,
+        "product_inventory": 7,
+        "quantity": 1
+    }
+},
+{
+    "model": "store.cartitem",
+    "pk": 23,
+    "fields": {
+        "cart": 15,
+        "product_inventory": 7,
+        "quantity": 1
+    }
+},
+{
+    "model": "store.cartitem",
+    "pk": 24,
+    "fields": {
+        "cart": 15,
+        "product_inventory": 3,
+        "quantity": 1
+    }
+},
+{
+    "model": "store.cartitem",
+    "pk": 25,
+    "fields": {
+        "cart": 16,
+        "product_inventory": 7,
+        "quantity": 1
+    }
+},
+{
+    "model": "store.cartitem",
+    "pk": 32,
+    "fields": {
+        "cart": 22,
+        "product_inventory": 5,
+        "quantity": 1
+    }
+},
+{
+    "model": "store.cartitem",
+    "pk": 44,
+    "fields": {
+        "cart": 2,
+        "product_inventory": 1,
+        "quantity": 1
+    }
+},
+{
+    "model": "store.favouriteitem",
+    "pk": 32,
+    "fields": {
+        "user": 21,
+        "product": 2,
+        "created_at": "2024-09-17T12:37:50.511Z"
+    }
+},
+{
+    "model": "store.favouriteitem",
+    "pk": 49,
+    "fields": {
+        "user": 21,
+        "product": 6,
+        "created_at": "2024-09-24T08:50:01.199Z"
+    }
+},
+{
+    "model": "store.favouriteitem",
+    "pk": 50,
+    "fields": {
+        "user": 21,
+        "product": 8,
+        "created_at": "2024-09-29T08:17:07.685Z"
+    }
+},
+{
+    "model": "store.favouriteitem",
+    "pk": 52,
+    "fields": {
+        "user": 6,
+        "product": 6,
+        "created_at": "2024-09-29T08:46:37.344Z"
+    }
+},
+{
+    "model": "store.favouriteitem",
+    "pk": 53,
+    "fields": {
+        "user": 6,
+        "product": 9,
+        "created_at": "2024-09-29T08:46:38.975Z"
+    }
+},
+{
+    "model": "store.order",
+    "pk": 1,
+    "fields": {
+        "user": 21,
+        "created_at": "2024-10-02T18:00:14.397Z",
+        "total_price": "5000.00",
+        "delivery_address": "lol kek",
+        "status": "F"
+    }
+},
+{
+    "model": "store.order",
+    "pk": 2,
+    "fields": {
+        "user": 21,
+        "created_at": "2024-10-03T09:43:57.715Z",
+        "total_price": "5000.00",
+        "delivery_address": "lol kek",
+        "status": "F"
+    }
+},
+{
+    "model": "store.order",
+    "pk": 3,
+    "fields": {
+        "user": 21,
+        "created_at": "2024-10-03T09:45:30.288Z",
+        "total_price": "12000.00",
+        "delivery_address": "lol kek",
+        "status": "F"
+    }
+},
+{
+    "model": "store.order",
+    "pk": 4,
+    "fields": {
+        "user": 21,
+        "created_at": "2024-10-03T09:57:18.119Z",
+        "total_price": "6000.00",
+        "delivery_address": "Москва, улица Пушкина, дом 0",
+        "status": "F"
+    }
+},
+{
+    "model": "store.order",
+    "pk": 5,
+    "fields": {
+        "user": 21,
+        "created_at": "2024-10-03T10:25:55.917Z",
+        "total_price": "10000.00",
+        "delivery_address": "Москва, улица Пушкина, дом 0",
+        "status": "F"
+    }
+},
+{
+    "model": "store.order",
+    "pk": 6,
+    "fields": {
+        "user": 21,
+        "created_at": "2024-10-03T10:41:19.353Z",
+        "total_price": "10000.00",
+        "delivery_address": "Москва, улица Пушкина, дом 0",
+        "status": "S"
+    }
+},
+{
+    "model": "store.orderitem",
+    "pk": 1,
+    "fields": {
+        "order": 1,
+        "product_inventory": 4,
+        "quantity": 1,
+        "price": "5000.00"
+    }
+},
+{
+    "model": "store.orderitem",
+    "pk": 2,
+    "fields": {
+        "order": 2,
+        "product_inventory": 4,
+        "quantity": 1,
+        "price": "5000.00"
+    }
+},
+{
+    "model": "store.orderitem",
+    "pk": 3,
+    "fields": {
+        "order": 3,
+        "product_inventory": 6,
+        "quantity": 2,
+        "price": "6000.00"
+    }
+},
+{
+    "model": "store.orderitem",
+    "pk": 4,
+    "fields": {
+        "order": 4,
+        "product_inventory": 6,
+        "quantity": 1,
+        "price": "6000.00"
+    }
+},
+{
+    "model": "store.orderitem",
+    "pk": 5,
+    "fields": {
+        "order": 5,
+        "product_inventory": 2,
+        "quantity": 1,
+        "price": "10000.00"
+    }
+},
+{
+    "model": "store.orderitem",
+    "pk": 6,
+    "fields": {
+        "order": 6,
+        "product_inventory": 1,
+        "quantity": 1,
+        "price": "10000.00"
+    }
+},
+{
+    "model": "users.user",
+    "pk": 6,
+    "fields": {
+        "password": "pbkdf2_sha256$720000$IpKSqasymteOh4glxgrIcA$t07iyg7XDr5vAbB47tnqOct91IUTsQyJjUVTYizJkjI=",
+        "last_login": "2024-10-03T10:58:52.492Z",
+        "is_superuser": true,
+        "first_name": "",
+        "last_name": "",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2024-09-11T10:08:38.233Z",
+        "email": "admin@mail.ru",
+        "fullname": "Maxim",
+        "phone": "00000",
+        "address": null,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "users.user",
+    "pk": 21,
+    "fields": {
+        "password": "pbkdf2_sha256$720000$Sq6CaZQKOYBl4KBbnz8q3M$uGKE5dmMiy01EFytnCU4JgwY2kW04z/IZ87++G9hoAk=",
+        "last_login": "2024-10-03T11:01:43.771Z",
+        "is_superuser": false,
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-09-12T05:12:25.841Z",
+        "email": "maximys2142@mail.ru",
+        "fullname": "kek",
+        "phone": "0000",
+        "address": "Москва, улица Пушкина, дом 0",
+        "groups": [],
+        "user_permissions": []
+    }
+}
+]

@@ -1,0 +1,72 @@
+{% extends 'store/base.html' %}
+{% load static %}
+{% block content %}
+
+<!-- Контент страницы -->
+<section class="bg0 p-t-75 p-b-120">
+    <div class="container" style="margin-top: 100px;">
+        <div class="row p-b-148">
+            <div class="col-md-7 col-lg-8">
+                <div class="p-t-7 p-r-85 p-r-15-lg p-r-0-md">
+                    <h3 class="mtext-111 cl2 p-b-16" style="font-size: 28px;">
+                        Наша история
+                    </h3>
+
+                    <p class="stext-113 cl6 p-b-26" style="font-size: 20px;">
+                        Добро пожаловать в наш магазин! Мы начинали с маленькой команды, горящих желанием создать идеальный интернет-магазин одежды. Стремление к качеству и желание предоставить лучшее вдохновляет нас каждый день. Наш ассортимент тщательно подобран, чтобы каждый мог найти что-то своё, будь то модные новинки или классические вещи.
+                    </p>
+
+                    <p class="stext-113 cl6 p-b-26" style="font-size: 20px;">
+                        За годы работы мы завоевали доверие тысяч клиентов, благодаря нашему внимательному отношению к каждому заказу и вниманию к деталям. Мы верим, что мода должна быть доступна каждому, и наша цель — сделать покупки лёгкими и приятными.
+                    </p>
+
+                    <p class="stext-113 cl6 p-b-26" style="font-size: 20px;">
+                        Остались вопросы? Свяжитесь с нами по телефону +7 (495) 123-45-67 или напишите на info@store.ru. Мы всегда рады помочь!
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-11 col-md-5 col-lg-4 m-lr-auto">
+                <div class="how-bor1">
+                    <div class="hov-img0">
+                        <img src="{% static 'images/about-01.jpg' %}" alt="Наша команда" style="max-width: 100%; height: auto;">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="order-md-2 col-md-7 col-lg-8 p-b-30">
+                <div class="p-t-7 p-l-85 p-l-15-lg p-l-0-md">
+                    <h3 class="mtext-111 cl2 p-b-16" style="font-size: 28px;">
+                        Наша миссия
+                    </h3>
+
+                    <p class="stext-113 cl6 p-b-26" style="font-size: 20px;">
+                        Мы верим, что мода — это способ выразить себя, поэтому наша миссия — предоставить вам доступ к самым актуальным трендам и комфортной одежде. Каждый наш продукт создан с любовью и заботой о наших клиентах.
+                    </p>
+
+                    <div class="bor16 p-l-29 p-b-9 m-t-22">
+                        <p class="stext-114 cl6 p-r-40 p-b-11" style="font-size: 20px;">
+                            "Креативность — это соединение идей. Когда ты видишь что-то иначе, мир обретает новые возможности."
+                        </p>
+
+                        <span class="stext-111 cl8" style="font-size: 18px;">
+                            - Стив Джобс
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="order-md-1 col-11 col-md-5 col-lg-4 m-lr-auto p-b-30">
+                <div class="how-bor2">
+                    <div class="hov-img0">
+                        <img src="{% static 'images/about-02.jpg' %}" alt="Наши ценности" style="max-width: 100%; height: auto;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

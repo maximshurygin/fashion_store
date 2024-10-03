@@ -1,0 +1,64 @@
+{% extends 'store/base.html' %}
+{% load static %}
+{% block content %}
+
+<!-- Контент страницы -->
+<section class="bg0 p-t-75 p-b-120">
+    <div class="container" style="margin-top: 100px;">
+        <!-- Условия возврата -->
+        <div class="row p-b-60">
+            <div class="col-md-6">
+                <div class="p-t-7 p-r-15-lg p-r-0-md">
+                    <h3 class="mtext-111 cl2 p-b-16" style="font-size: 28px;">
+                        Условия возврата товара
+                    </h3>
+
+                    <p class="stext-113 cl6 p-b-26" style="font-size: 20px;">
+                        Вы можете вернуть или обменять товар в течение 14 дней с момента получения заказа. Для этого товар должен быть не ношеным, с сохраненными ярлыками и в оригинальной упаковке.
+                    </p>
+
+                    <p class="stext-113 cl6 p-b-26" style="font-size: 20px;">
+                        Пожалуйста, убедитесь, что все аксессуары и документы, прилагаемые к товару, также возвращены. Возврат осуществляется только при наличии чека или подтверждения покупки.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6 d-flex justify-content-center align-items-center">
+                <div class="how-bor1" style="max-width: 50%; text-align: center;">
+                    <div class="hov-img0">
+                        <img src="{% static 'images/returns1.jpg' %}" alt="Условия возврата товара" style="max-width: 100%; height: auto;">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Процесс возврата -->
+        <div class="row p-b-60">
+            <div class="col-md-6 order-md-2">
+                <div class="p-t-7 p-l-15-lg p-l-0-md">
+                    <h3 class="mtext-111 cl2 p-b-16" style="font-size: 28px;">
+                        Процесс возврата
+                    </h3>
+
+                    <p class="stext-113 cl6 p-b-26" style="font-size: 20px;">
+                        Для начала процесса возврата свяжитесь с нашей службой поддержки через электронную почту или по телефону. Мы предоставим вам инструкции по возврату товара и необходимую информацию.
+                    </p>
+
+                    <p class="stext-113 cl6 p-b-26" style="font-size: 20px;">
+                        После получения и проверки товара мы оформим возврат средств на ваш оригинальный способ оплаты в течение 5-7 рабочих дней. Если вы выбрали обмен, мы отправим замену товара в кратчайшие сроки.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6 order-md-1 d-flex justify-content-center align-items-center">
+                <div class="how-bor2" style="max-width: 50%; text-align: center;">
+                    <div class="hov-img0">
+                        <img src="{% static 'images/returns3.jpg' %}" alt="Процесс возврата" style="max-width: 100%; height: auto;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

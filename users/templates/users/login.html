@@ -1,0 +1,39 @@
+{% extends 'store/base.html' %}
+
+{% block content %}
+    <div class="container" style="margin-top: 100px; margin-bottom: 50px">
+
+        <h1 style="text-align: center; margin-bottom: 20px;">{{ title }}</h1>
+
+        <form method="post"
+              style="max-width: 400px; margin: 0 auto; padding: 20px; border: 1px solid #ccc; border-radius: 5px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
+            {% csrf_token %}
+
+            <!-- Вывод общих ошибок формы -->
+            {% if form.non_field_errors %}
+                <div style="margin-bottom: 15px;">
+                    {{ form.non_field_errors }}
+                </div>
+            {% endif %}
+
+            <div style="margin-bottom: 15px;">
+                {{ form.username.label_tag }}
+                {{ form.username }}
+                {{ form.username.errors }}
+            </div>
+            <div style="margin-bottom: 15px;">
+                {{ form.password.label_tag }}
+                {{ form.password }}
+                {{ form.password.errors }}
+            </div>
+
+            <button type="submit" class="btn"
+                    style="margin-top: 20px; width: 100%; padding: 10px; background-color: #333; color: white; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);">
+                Войти
+            </button>
+            <div><a href="{% url 'users:password_reset' %}" style="margin-top: 20px; display: inline-block;">Забыли
+                пароль?</a></div>
+                    <div><a href="{% url 'users:register' %}" style="margin-top: 5px; display: inline-block;">Регистрация</a></div>
+        </form>
+    </div>
+{% endblock %}

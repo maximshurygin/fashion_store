@@ -1,0 +1,526 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="{% static 'images/icons/favicon.png' %}" />
+
+    <!-- CSS Libraries -->
+    <link rel="stylesheet" href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'fonts/iconic/css/material-design-iconic-font.min.css' %}">
+    <link rel="stylesheet" href="{% static 'fonts/linearicons-v1.0.0/icon-font.min.css' %}">
+    <link rel="stylesheet" href="{% static 'vendor/animate/animate.css' %}">
+    <link rel="stylesheet" href="{% static 'vendor/css-hamburgers/hamburgers.min.css' %}">
+    <link rel="stylesheet" href="{% static 'vendor/animsition/css/animsition.min.css' %}">
+    <link rel="stylesheet" href="{% static 'vendor/select2/select2.min.css' %}">
+    <link rel="stylesheet" href="{% static 'vendor/daterangepicker/daterangepicker.css' %}">
+    <link rel="stylesheet" href="{% static 'vendor/slick/slick.css' %}">
+    <link rel="stylesheet" href="{% static 'vendor/MagnificPopup/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'vendor/perfect-scrollbar/perfect-scrollbar.css' %}">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/util.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+</head>
+
+<body class="animsition">
+
+    <!-- Header -->
+    <header>
+        <!-- Header Desktop -->
+        <div class="container-menu-desktop">
+            <!-- Topbar -->
+            <div class="top-bar">
+                <div class="content-topbar flex-sb-m h-full container">
+                    <div class="left-top-bar">
+                        Бесплатная доставка на заказ от 10000 рублей
+                    </div>
+
+                    <div class="right-top-bar flex-w h-full">
+                        <a href="{% url 'store:info' %}" class="flex-c-m trans-04 p-lr-25">
+                            Оплата и доставка
+                        </a>
+                        {% if user.is_authenticated %}
+                            <a href="{% url 'users:profile' %}" class="flex-c-m trans-04 p-lr-25">
+                                Мой аккаунт
+                            </a>
+                        {% else %}
+                            <a href="{% url 'users:login' %}" class="flex-c-m trans-04 p-lr-25">
+                                Вход
+                            </a>
+                            <a href="{% url 'users:register' %}" class="flex-c-m trans-04 p-lr-25">
+                                Регистрация
+                            </a>
+                        {% endif %}
+
+                        <a href="#" class="flex-c-m trans-04 p-lr-25">
+                            RU
+                        </a>
+
+                        <a href="#" class="flex-c-m trans-04 p-lr-25">
+                            RUB
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Menu -->
+            <div class="wrap-menu-desktop">
+                <nav class="limiter-menu-desktop container">
+
+                    <!-- Logo -->
+                    <a href="{% url 'store:index' %}" class="logo">
+                        <img src="{% static 'images/icons/logo-01.png' %}" alt="Логотип" loading="lazy">
+                    </a>
+
+                    <!-- Menu Items -->
+                    <div class="menu-desktop">
+                        <ul class="main-menu">
+                            <li class="{% if request.resolver_match.url_name == 'index' %}active-menu{% endif %}">
+                                <a href="{% url 'store:index' %}" class="menu-link">Главная</a>
+                            </li>
+
+                            <li class="{% if request.resolver_match.url_name == 'product_list' %}active-menu{% endif %}">
+                                <a href="{% url 'store:product_list' %}" class="menu-link">Все товары</a>
+                            </li>
+                            <li class="{% if request.resolver_match.url_name == 'mens_products' %}active-menu{% endif %}">
+                                <a href="{% url 'store:mens_products' %}" class="menu-link">Мужское</a>
+                            </li>
+                            <li class="{% if request.resolver_match.url_name == 'womens_products' %}active-menu{% endif %}">
+                                <a href="{% url 'store:womens_products' %}" class="menu-link">Женское</a>
+                            </li>
+
+                            <li class="{% if request.resolver_match.url_name == 'about' %}active-menu{% endif %}">
+                                <a href="{% url 'store:about' %}" class="menu-link">О нас</a>
+                            </li>
+
+                            <li class="{% if request.resolver_match.url_name == 'contact' %}active-menu{% endif %}">
+                                <a href="{% url 'store:contact' %}" class="menu-link">Контакты</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Icon Header -->
+                    <div class="wrap-icon-header flex-w flex-r-m">
+                        <div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 js-show-modal-search" aria-label="Поиск">
+                            <i class="zmdi zmdi-search"></i>
+                        </div>
+
+                        <div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti js-show-cart" data-notify="{{ cart_items_count }}" aria-label="Корзина">
+                            <i class="zmdi zmdi-shopping-cart"></i>
+                        </div>
+
+                        <a href="{% url 'store:favourite_list' %}" class="dis-block icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti" data-notify="{{ favorites_count }}" aria-label="Избранное">
+                            <i class="zmdi zmdi-favorite-outline"></i>
+                        </a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Header Mobile -->
+        <div class="wrap-header-mobile">
+            <!-- Logo Mobile -->
+            <div class="logo-mobile">
+                <a href="{% url 'store:index' %}">
+                    <img src="{% static 'images/icons/logo-01.png' %}" alt="Логотип" loading="lazy">
+                </a>
+            </div>
+
+            <!-- Icon Header Mobile -->
+            <div class="wrap-icon-header flex-w flex-r-m m-r-15">
+                <div class="icon-header-item cl2 hov-cl1 trans-04 p-r-11 js-show-modal-search" aria-label="Поиск">
+                    <i class="zmdi zmdi-search"></i>
+                </div>
+
+                <div class="icon-header-item cl2 hov-cl1 trans-04 p-r-11 p-l-10 icon-header-noti js-show-cart" data-notify="{{ cart_items_count }}" aria-label="Корзина">
+                    <i class="zmdi zmdi-shopping-cart"></i>
+                </div>
+
+                <a href="{% url 'store:favourite_list' %}" class="dis-block icon-header-item cl2 hov-cl1 trans-04 p-r-11 p-l-10 icon-header-noti" data-notify="{{ favorites_count }}" aria-label="Избранное">
+                    <i class="zmdi zmdi-favorite-outline"></i>
+                </a>
+            </div>
+
+            <!-- Button Show Menu -->
+            <div class="btn-show-menu-mobile hamburger hamburger--squeeze">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </div>
+        </div>
+
+        <!-- Menu Mobile -->
+        <div class="menu-mobile">
+            <ul class="topbar-mobile">
+                <li>
+                    <div class="left-top-bar">
+                        Бесплатная доставка на заказ от 10000 рублей
+                    </div>
+                </li>
+
+                <li>
+                    <div class="right-top-bar flex-w h-full">
+                        <a href="{% url 'store:info' %}" class="flex-c-m p-lr-10 trans-04">Оплата и доставка</a>
+                        {% if user.is_authenticated %}
+                            <a href="{% url 'users:profile' %}" class="flex-c-m p-lr-10 trans-04">Мой аккаунт</a>
+                        {% else %}
+                            <a href="{% url 'users:login' %}" class="flex-c-m p-lr-10 trans-04">Вход</a>
+                            <a href="{% url 'users:register' %}" class="flex-c-m p-lr-10 trans-04">Регистрация</a>
+                        {% endif %}
+                        <a href="#" class="flex-c-m p-lr-10 trans-04">RU</a>
+                        <a href="#" class="flex-c-m p-lr-10 trans-04">RUB</a>
+                    </div>
+                </li>
+            </ul>
+
+            <ul class="main-menu-m">
+                <li class="{% if request.resolver_match.url_name == 'index' %}active-menu{% endif %}">
+                    <a href="{% url 'store:index' %}">Главная</a>
+                </li>
+
+                <li class="{% if request.resolver_match.url_name == 'product_list' %}active-menu{% endif %}">
+                    <a href="{% url 'store:product_list' %}">Все товары</a>
+                </li>
+                <li class="{% if request.resolver_match.url_name == 'mens_products' %}active-menu{% endif %}">
+                    <a href="{% url 'store:mens_products' %}">Мужское</a>
+                </li>
+                <li class="{% if request.resolver_match.url_name == 'womens_products' %}active-menu{% endif %}">
+                    <a href="{% url 'store:womens_products' %}">Женское</a>
+                </li>
+
+                <li class="{% if request.resolver_match.url_name == 'about' %}active-menu{% endif %}">
+                    <a href="{% url 'store:about' %}">О нас</a>
+                </li>
+
+                <li class="{% if request.resolver_match.url_name == 'contact' %}active-menu{% endif %}">
+                    <a href="{% url 'store:contact' %}">Контакты</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Modal Search -->
+        <div class="modal-search-header flex-c-m trans-04 js-hide-modal-search">
+            <div class="container-search-header">
+                <button class="flex-c-m btn-hide-modal-search trans-04 js-hide-modal-search" aria-label="Закрыть поиск">
+                    <img src="{% static 'images/icons/icon-close2.png' %}" alt="Закрыть">
+                </button>
+
+                <form class="wrap-search-header flex-w p-l-15" method="GET" action="#">
+                    {% csrf_token %}
+                    <button class="flex-c-m trans-04" type="submit" aria-label="Поиск">
+                        <i class="zmdi zmdi-search"></i>
+                    </button>
+                    <label>
+                        <input class="plh3" type="text" name="search" placeholder="Поиск..." required>
+                    </label>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <!-- Cart Panel -->
+    <div class="wrap-header-cart js-panel-cart">
+        <div class="s-full js-hide-cart" aria-label="Закрыть корзину"></div>
+
+        <div class="header-cart flex-col-l p-l-65 p-r-25">
+            <div class="header-cart-title flex-w flex-sb-m p-b-8">
+                <span class="mtext-103 cl2">
+                    Ваша корзина
+                </span>
+
+                <button class="fs-35 lh-10 cl2 p-lr-5 pointer hov-cl1 trans-04 js-hide-cart" aria-label="Закрыть корзину">
+                    <i class="zmdi zmdi-close"></i>
+                </button>
+            </div>
+
+            <div class="header-cart-content flex-w js-pscroll">
+                {% if header_cart_items %}
+                    <ul class="header-cart-wrapitem w-full">
+                        {% for item in header_cart_items %}
+                            <li class="header-cart-item flex-w flex-t m-b-12">
+                                <a href="{{ item.product_inventory.product.get_absolute_url }}" class="header-cart-item-img no-icon" aria-label="{{ item.product_inventory.product.name }}">
+                                    {% if item.product_inventory.product.images.first %}
+                                        <img src="{{ item.product_inventory.product.images.first.image.url }}" alt="{{ item.product_inventory.product.name }}" loading="lazy">
+                                    {% else %}
+                                        <img src="{% static 'images/default_image.jpeg' %}" alt="Изображение отсутствует" loading="lazy">
+                                    {% endif %}
+                                </a>
+
+                                <div class="header-cart-item-txt p-t-8">
+                                    <a href="{{ item.product_inventory.product.get_absolute_url }}" class="header-cart-item-name m-b-18 hov-cl1 trans-04">
+                                        {{ item.product_inventory.product.name }}
+                                    </a>
+
+                                    <span class="header-cart-item-info">
+                                        {{ item.quantity }} x {{ item.product_inventory.product.price|floatformat:2 }} ₽
+                                    </span>
+                                </div>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% else %}
+                    <p class="text-center w-full">Ваша корзина пуста.</p>
+                {% endif %}
+            </div>
+
+            {% if header_cart_items %}
+                <div class="w-full">
+                    <div class="header-cart-total w-full p-tb-40">
+                        Итого: {{ header_cart.total_price|floatformat:2 }} ₽
+                    </div>
+
+                    <div class="header-cart-buttons flex-w w-full">
+                        <a href="{% url 'store:cart_detail' %}" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-b-10">
+                            Перейти в корзину
+                        </a>
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+
+    <!-- Основной контент -->
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg3 p-t-75 p-b-32">
+        <div class="container">
+            <div class="row">
+                <!-- Категории -->
+                <div class="col-sm-6 col-lg-3 p-b-50">
+                    <h4 class="stext-301 cl0 p-b-30">
+                        Категории
+                    </h4>
+
+                    <ul>
+                        <li class="p-b-10">
+                            <a href="{% url 'store:womens_products' %}" class="stext-107 cl7 hov-cl1 trans-04">
+                                Женское
+                            </a>
+                        </li>
+
+                        <li class="p-b-10">
+                            <a href="{% url 'store:mens_products' %}" class="stext-107 cl7 hov-cl1 trans-04">
+                                Мужское
+                            </a>
+                        </li>
+
+                        <li class="p-b-10">
+                            <a href="{% url 'store:product_list' %}" class="stext-107 cl7 hov-cl1 trans-04">
+                                Все товары
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Помощь -->
+                <div class="col-sm-6 col-lg-3 p-b-50">
+                    <h4 class="stext-301 cl0 p-b-30">
+                        Помощь
+                    </h4>
+
+                    <ul>
+                        <li class="p-b-10">
+                            <a href="{% url 'store:info' %}" class="stext-107 cl7 hov-cl1 trans-04">
+                                Оплата и доставка
+                            </a>
+                        </li>
+
+                        <li class="p-b-10">
+                            <a href="{% url 'store:returns' %}" class="stext-107 cl7 hov-cl1 trans-04">
+                                Возврат товара
+                            </a>
+                        </li>
+
+{#                        <li class="p-b-10">#}
+{#                            <a href="#" class="stext-107 cl7 hov-cl1 trans-04">#}
+{#                                FAQs#}
+{#                            </a>#}
+{#                        </li>#}
+                    </ul>
+                </div>
+
+                <!-- Связаться с нами -->
+                <div class="col-sm-6 col-lg-3 p-b-50">
+                    <h4 class="stext-301 cl0 p-b-30">
+                        Связаться с нами
+                    </h4>
+
+                    <p class="stext-107 cl7 size-201">
+                        Остались вопросы?<br>
+                        Сообщите нам в магазине по адресу:<br>
+                        Наш магазин, ул. Примерная, д. 10, Москва, Россия или
+                        позвоните нам по телефону +7(495)-123-45-67
+                    </p>
+
+                    <div class="p-t-27">
+                        <a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16" aria-label="Facebook">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+
+                        <a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16" aria-label="Instagram">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+
+                        <a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16" aria-label="Pinterest">
+                            <i class="fa fa-pinterest-p"></i>
+                        </a>
+                    </div>
+                </div>
+
+{#                <!-- Newsletter -->#}
+{#                <div class="col-sm-6 col-lg-3 p-b-50">#}
+{#                    <h4 class="stext-301 cl0 p-b-30">#}
+{#                        Newsletter#}
+{#                    </h4>#}
+{##}
+{#                    <form method="POST" action="#">#}
+{#                        {% csrf_token %}#}
+{#                        <div class="wrap-input1 w-full p-b-4">#}
+{#                            <label>#}
+{#                                <input class="input1 bg-none plh1 stext-107 cl7" type="email" name="email" placeholder="email@example.com" required>#}
+{#                            </label>#}
+{#                            <div class="focus-input1 trans-04"></div>#}
+{#                        </div>#}
+{##}
+{#                        <div class="p-t-18">#}
+{#                            <button type="submit" class="flex-c-m stext-101 cl0 size-103 bg1 bor1 hov-btn2 p-lr-15 trans-04">#}
+{#                                Подписаться#}
+{#                            </button>#}
+{#                        </div>#}
+{#                    </form>#}
+{#                </div>#}
+            </div>
+
+            <!-- Платежные методы и авторские права -->
+            <div class="p-t-40">
+                <div class="flex-c-m flex-w p-b-18">
+                    <a href="#" class="m-all-1">
+                        <img src="{% static 'images/icons/icon-pay-01.png' %}" alt="Оплата Visa" loading="lazy">
+                    </a>
+
+                    <a href="#" class="m-all-1">
+                        <img src="{% static 'images/icons/icon-pay-02.png' %}" alt="Оплата MasterCard" loading="lazy">
+                    </a>
+
+                    <a href="#" class="m-all-1">
+                        <img src="{% static 'images/icons/icon-pay-03.png' %}" alt="Оплата PayPal" loading="lazy">
+                    </a>
+
+                    <a href="#" class="m-all-1">
+                        <img src="{% static 'images/icons/icon-pay-04.png' %}" alt="Оплата Apple Pay" loading="lazy">
+                    </a>
+
+                    <a href="#" class="m-all-1">
+                        <img src="{% static 'images/icons/icon-pay-05.png' %}" alt="Оплата Google Pay" loading="lazy">
+                    </a>
+                </div>
+
+                <p class="stext-107 cl6 txt-center">
+                    &copy; <span id="current-year"></span> Все права защищены
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <div class="btn-back-to-top" id="myBtn" aria-label="Наверх">
+        <span class="symbol-btn-back-to-top">
+            <i class="zmdi zmdi-chevron-up"></i>
+        </span>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="{% static 'vendor/jquery/jquery-3.2.1.min.js' %}" defer></script>
+    <script src="{% static 'vendor/animsition/js/animsition.min.js' %}" defer></script>
+    <script src="{% static 'vendor/bootstrap/js/popper.js' %}" defer></script>
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.min.js' %}" defer></script>
+    <script src="{% static 'vendor/select2/select2.min.js' %}" defer></script>
+    <script src="{% static 'vendor/daterangepicker/moment.min.js' %}" defer></script>
+    <script src="{% static 'vendor/daterangepicker/daterangepicker.js' %}" defer></script>
+    <script src="{% static 'vendor/slick/slick.min.js' %}" defer></script>
+    <script src="{% static 'js/slick-custom.js' %}" defer></script>
+    <script src="{% static 'vendor/parallax100/parallax100.js' %}" defer></script>
+    <script src="{% static 'vendor/MagnificPopup/jquery.magnific-popup.min.js' %}" defer></script>
+    <script src="{% static 'vendor/isotope/isotope.pkgd.min.js' %}" defer></script>
+    <script src="{% static 'vendor/sweetalert/sweetalert.min.js' %}" defer></script>
+    <script src="{% static 'vendor/perfect-scrollbar/perfect-scrollbar.min.js' %}" defer></script>
+    <script src="{% static 'js/main.js' %}" defer></script>
+
+    <!-- Custom Scripts -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Установка текущего года в футере
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+
+            // Инициализация Select2
+            $(".js-select2").each(function () {
+                $(this).select2({
+                    minimumResultsForSearch: 20
+                });
+            });
+
+            // Инициализация Parallax
+            $('.parallax100').parallax100();
+
+            // Инициализация Magnific Popup
+            $('.gallery-lb').each(function () {
+                $(this).magnificPopup({
+                    delegate: 'a',
+                    type: 'image',
+                    gallery: {
+                        enabled: true
+                    },
+                    mainClass: 'mfp-fade'
+                });
+            });
+
+            // Обработчики событий для wishlist и cart
+            $('.js-addwish-b2, .js-addwish-detail').each(function () {
+                var nameProduct = $(this).closest('.product-container').find('.js-name').text();
+                $(this).on('click', function (e) {
+                    e.preventDefault();
+                    swal(nameProduct, "добавлен в список желаний!", "success")
+                        .then(() => {
+                            $(this).addClass('js-added');
+                        });
+                });
+            });
+
+            $('.js-addcart-detail').each(function () {
+                var nameProduct = $(this).closest('.product-container').find('.js-name').text();
+                $(this).on('click', function (e) {
+                    e.preventDefault();
+                    swal(nameProduct, "добавлен в корзину!", "success");
+                });
+            });
+
+            // Инициализация Perfect Scrollbar
+            $('.js-pscroll').each(function () {
+                var ps = new PerfectScrollbar(this, {
+                    wheelSpeed: 1,
+                    scrollingThreshold: 1000,
+                    wheelPropagation: false,
+                });
+
+                $(window).on('resize', function () {
+                    ps.update();
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

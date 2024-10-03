@@ -1,0 +1,83 @@
+{% extends 'store/base.html' %}
+
+{% load static %}
+<!-- templates/cart_detail.html -->
+
+{% block content %}
+    <div class="container" style="margin-top: 100px; margin-bottom: 100px;">
+        <h1 class="text-center mb-5">Корзина</h1>
+        {% if items %}
+            <table class="table table-bordered table-hover">
+                <thead class="thead-light">
+                <tr>
+                    <th>Товар</th>
+                    <th>Размер</th>
+                    <th>Цвет</th>
+                    <th style="width: 150px;">Количество</th>
+                    <th>Цена</th>
+                    <th>Итого</th>
+                    <th>Действия</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for item in items %}
+                    <tr>
+                        <td>
+                            <div class="media">
+                                {% if item.product_inventory.product.images.first %}
+                                    <img src="{{ item.product_inventory.product.images.first.image.url }}" class="mr-3"
+                                         alt="{{ item.product_inventory.product.name }}"
+                                         style="width: 64px; height: 64px; object-fit: cover;">
+                                {% else %}
+                                    <img src="{% static 'images/default_image.jpeg' %}" class="mr-3" alt="No Image"
+                                         style="width: 64px; height: 64px; object-fit: cover;">
+                                {% endif %}
+                                <div class="media-body">
+                                    <h5 class="mt-0">
+                                        <a href="{{ item.product_inventory.product.get_absolute_url }}" style="color: #333">{{ item.product_inventory.product.name }}</a>
+                                    </h5>
+                                </div>
+                            </div>
+                        </td>
+                        <td>{{ item.product_inventory.size.name }}</td>
+                        <td>{{ item.product_inventory.color.name }}</td>
+                        <td>
+                            <form action="{% url 'store:update_cart_item' %}" method="post"
+                                  class="form-inline justify-content-center">
+                                {% csrf_token %}
+                                <input type="hidden" name="cart_item_id" value="{{ item.id }}">
+                                <div class="input-group">
+                                    <input type="number" name="quantity" value="{{ item.quantity }}" min="1"
+                                           class="form-control text-center" style="width: 60px;">
+                                    <div class="input-group-append">
+                                        <button type="submit" class="btn btn-outline-secondary">Обновить</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </td>
+                        <td>{{ item.product_inventory.product.price|floatformat:2 }} ₽</td>
+                        <td>{{ item.get_total_price|floatformat:2 }} ₽</td>
+                        <td>
+                            <form action="{% url 'store:remove_from_cart' %}" method="post">
+                                {% csrf_token %}
+                                <input type="hidden" name="cart_item_id" value="{{ item.id }}">
+                                <button type="submit" class="btn btn-sm btn-danger">Удалить</button>
+                            </form>
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+
+            <!-- Блок с общей стоимостью и кнопкой оформления заказа -->
+            <div class="d-flex justify-content-end mt-4">
+                <div>
+                    <h4>Общая стоимость: {{ cart.total_price|floatformat:0 }} ₽</h4>
+                    <a href="{% url 'store:create_order' %}" class="btn btn-success mt-2">Оформить заказ</a>
+                </div>
+            </div>
+        {% else %}
+            <p class="text-center">Ваша корзина пуста.</p>
+        {% endif %}
+    </div>
+{% endblock %}

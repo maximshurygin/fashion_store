@@ -1,0 +1,32 @@
+{% extends 'store/base.html' %}
+
+{% block content %}
+    <div class="container" style="margin-top: 100px; margin-bottom: 50px">
+
+        <h1 style="text-align: center; margin-bottom: 20px;">{{ title }}</h1>
+
+        <form method="post"
+              style="max-width: 400px; margin: 0 auto; padding: 20px; border: 1px solid #ccc; border-radius: 5px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
+            {% csrf_token %}
+            <div style="margin-bottom: 15px;">
+                {{ form.email.label_tag }}
+                {{ form.email }}
+                {{ form.email.errors }}
+            </div>
+            <div style="margin-bottom: 15px;">
+                {{ form.password1.label_tag }}
+                {{ form.password1 }}
+                {{ form.password1.errors }}
+            </div>
+            <div style="margin-bottom: 15px;">
+                {{ form.password2.label_tag }}
+                {{ form.password2 }}
+                {{ form.password2.errors }}
+            </div>
+            <button type="submit" class="btn"
+                    style="margin-top: 20px; width: 100%; padding: 10px; background-color: #333; color: white; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);">
+                Регистрация
+            </button>
+        </form>
+    </div>
+{% endblock %}

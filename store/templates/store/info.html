@@ -1,0 +1,64 @@
+{% extends 'store/base.html' %}
+{% load static %}
+{% block content %}
+
+<!-- Контент страницы -->
+<section class="bg0 p-t-75 p-b-120">
+    <div class="container" style="margin-top: 100px;">
+        <!-- Доставка по России -->
+        <div class="row p-b-60">
+            <div class="col-md-6">
+                <div class="p-t-7 p-r-15-lg p-r-0-md">
+                    <h3 class="mtext-111 cl2 p-b-16" style="font-size: 28px;">
+                        Доставка по России
+                    </h3>
+
+                    <p class="stext-113 cl6 p-b-26" style="font-size: 20px;">
+                        Мы осуществляем доставку по всей России с помощью надежных курьерских служб. В зависимости от региона доставка занимает от 3 до 10 рабочих дней. Номер для отслеживания предоставляется после отправки.
+                    </p>
+
+                    <p class="stext-113 cl6 p-b-26" style="font-size: 20px;">
+                        Для заказов от 10000 рублей доставка бесплатна. Для остальных заказов — 300 рублей. Мы стремимся к быстрому и удобному процессу доставки.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6 d-flex justify-content-center align-items-center">
+                <div class="how-bor1" style="max-width: 50%; text-align: center;">
+                    <div class="hov-img0">
+                        <img src="{% static 'images/delivery_image.jpg' %}" alt="Доставка по России" style="max-width: 100%; height: auto;">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Оплата при получении -->
+        <div class="row p-b-60">
+            <div class="col-md-6 order-md-2">
+                <div class="p-t-7 p-l-15-lg p-l-0-md">
+                    <h3 class="mtext-111 cl2 p-b-16" style="font-size: 28px;">
+                        Оплата при получении
+                    </h3>
+
+                    <p class="stext-113 cl6 p-b-26" style="font-size: 20px;">
+                        Вы можете оплатить заказ наличными или картой при получении заказа. Просто выберите этот способ при оформлении заказа. Пожалуйста, имейте при себе точную сумму для оплаты, так как у курьера может не быть сдачи.
+                    </p>
+
+                    <p class="stext-113 cl6 p-b-26" style="font-size: 20px;">
+                        Если у вас возникли вопросы о доставке или оплате, свяжитесь с нашей службой поддержки, и мы с радостью вам поможем.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6 order-md-1 d-flex justify-content-center align-items-center">
+                <div class="how-bor2" style="max-width: 50%; text-align: center;">
+                    <div class="hov-img0">
+                        <img src="{% static 'images/payment_image.jpg' %}" alt="Оплата наличными" style="max-width: 100%; height: auto;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
