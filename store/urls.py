@@ -1,4 +1,5 @@
 from django.urls import path
+from django.views.generic import TemplateView
 
 from store.apps import StoreConfig
 from store.views import index, about, contact, ProductList, ProductDetail, info, CartDetailView, \
@@ -11,6 +12,7 @@ urlpatterns = [
     path('', index, name='index'),
     path('about/', about, name='about'),
     path('contact/', contact, name='contact'),
+    path('contact/success/', TemplateView.as_view(template_name='store/contact_success.html'), name='contact_success'),
     path('products/', (ProductList.as_view()), name='product_list'),
     path('products/mens/', ProductList.as_view(), {'gender': 'M'}, name='mens_products'),
     path('products/womens/', ProductList.as_view(), {'gender': 'F'}, name='womens_products'),

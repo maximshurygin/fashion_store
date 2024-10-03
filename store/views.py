@@ -12,7 +12,7 @@ from django.urls import reverse_lazy
 from django.views import View
 from django.views.generic import ListView, DetailView, FormView, TemplateView
 
-from store.forms import OrderCreateForm
+from store.forms import OrderCreateForm, ContactForm
 from store.models import Product, ProductInventory, Cart, CartItem, FavouriteItem, Category, OrderItem, Order
 
 
@@ -25,7 +25,24 @@ def about(request):
 
 
 def contact(request):
-    return render(request, 'store/contact.html', context={'title': 'Контакты'})
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            email = form.cleaned_data['email']
+            message = form.cleaned_data['message']
+
+            send_mail(
+                subject=f'Сообщение от {email}',
+                message=message,
+                from_email=settings.EMAIL_HOST_USER,
+                recipient_list=[settings.EMAIL_HOST_USER],
+            )
+
+            return redirect('store:contact_success')
+    else:
+        form = ContactForm()
+
+    return render(request, 'store/contact.html', context={'title': 'Контакты', 'form': form})
 
 
 def returns(request):
