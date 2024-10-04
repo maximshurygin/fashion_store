@@ -312,8 +312,8 @@ class CreateOrderView(LoginRequiredMixin, FormView):
             return self.form_invalid(form)
 
     def send_order_confirmation_email(self, order):
-        subject = f'Подтверждение заказа #{order.id}'
-        message = (
+        subject1 = f'Подтверждение заказа #{order.id}'
+        message1 = (
             f'Здравствуйте, {order.user.fullname}!\n\n'
             f'Ваш заказ #{order.id} был успешно оформлен.\n'
             f'Дата заказа: {order.created_at}\n'
@@ -321,8 +321,19 @@ class CreateOrderView(LoginRequiredMixin, FormView):
             f'Адрес доставки:\n{order.delivery_address}\n\n'
             f'Спасибо за покупку!'
         )
-        recipient_list = [order.user.email]
-        send_email.delay(subject, message, settings.DEFAULT_FROM_EMAIL, recipient_list)
+        recipient_list1 = [order.user.email]
+        send_email.delay(subject1, message1, settings.DEFAULT_FROM_EMAIL, recipient_list1)
+
+        subject2 = f'Новый заказ #{order.id} от {order.user.email}'
+        message2 = (
+            f'Новый заказ #{order.id} был успешно оформлен.\n'
+            f'Клиент {order.user.email}'
+            f'Дата заказа: {order.created_at}\n'
+            f'Общая стоимость: {order.total_price} ₽\n\n'
+            f'Адрес доставки:\n{order.delivery_address}\n\n'
+        )
+        recipient_list2 = settings.EMAIL_HOST_USER
+        send_email.delay(subject2, message2, settings.DEFAULT_FROM_EMAIL, recipient_list2)
 
 
 class OrderDetailView(LoginRequiredMixin, DetailView):
@@ -351,7 +362,31 @@ class CancelOrderView(LoginRequiredMixin, View):
             with transaction.atomic():
                 order.cancel_order()
                 messages.success(request, 'Ваш заказ был успешно отменен.')
+                self.send_order_cancelation_email(order)
         except Exception as e:
             messages.error(request, 'Произошла ошибка при отмене заказа. Пожалуйста, попробуйте позже.')
 
         return redirect('store:order_detail', order_id=order.id)
+
+    def send_order_cancelation_email(self, order):
+        subject1 = f'Отмена заказа #{order.id}'
+        message1 = (
+            f'Здравствуйте, {order.user.fullname}!\n\n'
+            f'Ваш заказ #{order.id} был успешно отменен.\n'
+            f'Дата заказа: {order.created_at}\n'
+            f'Общая стоимость: {order.total_price} ₽\n\n'
+            f'Адрес доставки:\n{order.delivery_address}\n\n'
+        )
+        recipient_list1 = [order.user.email]
+        send_email.delay(subject1, message1, settings.DEFAULT_FROM_EMAIL, recipient_list1)
+
+        subject2 = f'Отмена заказа #{order.id} от {order.user.email}'
+        message2 = (
+            f'Заказ #{order.id} был отменен.\n'
+            f'Клиент {order.user.email}'
+            f'Дата заказа: {order.created_at}\n'
+            f'Общая стоимость: {order.total_price} ₽\n\n'
+            f'Адрес доставки:\n{order.delivery_address}\n\n'
+        )
+        recipient_list2 = settings.EMAIL_HOST_USER
+        send_email.delay(subject2, message2, settings.DEFAULT_FROM_EMAIL, recipient_list2)

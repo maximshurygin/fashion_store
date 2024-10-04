@@ -62,7 +62,7 @@ cd fashion_store
 # Настройки Django
 DEBUG=1
 SECRET_KEY=your_django_secret_key
-ALLOWED_HOSTS=localhost 127.0.0.1
+ALLOWED_HOSTS='localhost,127.0.0.1'
 
 # Настройки электронной почты
 EMAIL_HOST=smtp.gmail.com
