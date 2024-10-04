@@ -69,14 +69,19 @@ class ProductList(ListView):
         cache_key = f'product_list_{gender}_{category}'
         queryset = cache.get(cache_key)
         if not queryset:
-            queryset = super().get_queryset().select_related('category', 'brand')
+            # Выбираем только те товары, у которых есть инвентарь с stock > 0
+            queryset = super().get_queryset().filter(
+                productinventory__stock__gt=0
+            ).select_related('category', 'brand').distinct()
+            # queryset = super().get_queryset().select_related('category', 'brand')
             if gender in ['M', 'F']:
                 queryset = queryset.filter(gender__in=[gender, 'U'])
             elif gender in ['U']:
                 queryset = queryset.filter(gender='U')
             if category:
                 queryset = queryset.filter(category__slug=category)
-            cache.set(cache_key, queryset, 600)  # Правильное использование
+
+            cache.set(cache_key, queryset, 60)
         return queryset
 
     def get_context_data(self, **kwargs):
@@ -95,12 +100,6 @@ class ProductList(ListView):
         context['current_category'] = self.request.GET.get('category', '')
         return context
 
-    # def get_context_data(self, **kwargs):
-    #     context = super().get_context_data(**kwargs)
-    #     context['categories'] = Category.objects.all()
-    #     context['current_gender'] = self.kwargs.get('gender') or self.request.GET.get('gender', '')
-    #     context['current_category'] = self.request.GET.get('category', '')
-    #     return context
 
 
 class ProductDetail(DetailView):
