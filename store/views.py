@@ -101,7 +101,6 @@ class ProductList(ListView):
         return context
 
 
-
 class ProductDetail(DetailView):
     model = Product
     template_name = 'store/product_detail.html'
@@ -326,12 +325,12 @@ class CreateOrderView(LoginRequiredMixin, FormView):
         subject2 = f'Новый заказ #{order.id} от {order.user.email}'
         message2 = (
             f'Новый заказ #{order.id} был успешно оформлен.\n'
-            f'Клиент {order.user.email}'
+            f'Клиент {order.user.email}\n'
             f'Дата заказа: {order.created_at}\n'
             f'Общая стоимость: {order.total_price} ₽\n\n'
             f'Адрес доставки:\n{order.delivery_address}\n\n'
         )
-        recipient_list2 = settings.EMAIL_HOST_USER
+        recipient_list2 = [settings.EMAIL_HOST_USER]
         send_email.delay(subject2, message2, settings.DEFAULT_FROM_EMAIL, recipient_list2)
 
 
@@ -382,10 +381,10 @@ class CancelOrderView(LoginRequiredMixin, View):
         subject2 = f'Отмена заказа #{order.id} от {order.user.email}'
         message2 = (
             f'Заказ #{order.id} был отменен.\n'
-            f'Клиент {order.user.email}'
+            f'Клиент {order.user.email}\n'
             f'Дата заказа: {order.created_at}\n'
             f'Общая стоимость: {order.total_price} ₽\n\n'
             f'Адрес доставки:\n{order.delivery_address}\n\n'
         )
-        recipient_list2 = settings.EMAIL_HOST_USER
+        recipient_list2 = [settings.EMAIL_HOST_USER]
         send_email.delay(subject2, message2, settings.DEFAULT_FROM_EMAIL, recipient_list2)
