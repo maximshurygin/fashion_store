@@ -1,7 +1,4 @@
 from django.conf import settings
-from django.contrib.auth import get_user_model, login
-from django.core.mail import send_mail
-from django.core.paginator import Paginator
 from django.shortcuts import render, redirect
 from django.urls import reverse_lazy, reverse
 from django.utils.encoding import force_bytes, force_str
@@ -11,9 +8,10 @@ from django.views.generic import CreateView, UpdateView
 from store.models import Order
 from users.forms import RegisterUserForm, LoginUserForm, ProfileUserForm, UserPasswordChangeForm
 
-from django.contrib.auth.views import LoginView, LogoutView, PasswordChangeView
+from django.contrib.auth.views import LoginView, PasswordChangeView
 
 from users.models import User
+from users.task import send_user_email
 from users.utils import account_activation_token
 
 
@@ -69,7 +67,7 @@ class RegisterView(CreateView):
         '''
 
         # Отправляем письмо
-        send_mail(
+        send_user_email.delay(
             subject='Подтверждение регистрации',
             message=f'Перейдите по следующей ссылке для подтверждения: {activation_link}',
             # Текстовое сообщение на случай, если HTML не поддерживается

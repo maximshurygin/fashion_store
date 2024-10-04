@@ -3,7 +3,6 @@ from django.contrib import messages
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.core.cache import cache
 from django.core.exceptions import ValidationError
-from django.core.mail import send_mail
 from django.db import transaction
 from django.db.models import F
 from django.http import HttpResponseRedirect
@@ -14,6 +13,7 @@ from django.views.generic import ListView, DetailView, FormView, TemplateView
 
 from store.forms import OrderCreateForm, ContactForm
 from store.models import Product, ProductInventory, Cart, CartItem, FavouriteItem, Category, OrderItem, Order
+from store.task import send_email
 
 
 def index(request):
@@ -31,7 +31,7 @@ def contact(request):
             email = form.cleaned_data['email']
             message = form.cleaned_data['message']
 
-            send_mail(
+            send_email.delay(
                 subject=f'Сообщение от {email}',
                 message=message,
                 from_email=settings.EMAIL_HOST_USER,
@@ -322,7 +322,7 @@ class CreateOrderView(LoginRequiredMixin, FormView):
             f'Спасибо за покупку!'
         )
         recipient_list = [order.user.email]
-        send_mail(subject, message, settings.DEFAULT_FROM_EMAIL, recipient_list)
+        send_email.delay(subject, message, settings.DEFAULT_FROM_EMAIL, recipient_list)
 
 
 class OrderDetailView(LoginRequiredMixin, DetailView):
