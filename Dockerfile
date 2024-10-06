@@ -22,4 +22,4 @@ COPY . .
 EXPOSE 8000
 
 # Запускаем команду, которая будет выполняться при запуске контейнера
-CMD ["sh", "-c", "until nc -z $DB_HOST $DB_PORT; do echo 'Waiting for the database...'; sleep 2; done && python manage.py migrate && python manage.py runserver 0.0.0.0:8000"]
+CMD ["sh", "-c", "until nc -z $DB_HOST $DB_PORT; do echo 'Waiting for the database...'; sleep 2; done && python manage.py migrate && gunicorn --bind 0.0.0.0:8000 config.wsgi:application"]
